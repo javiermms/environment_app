@@ -1,0 +1,13 @@
+To-Do List(v0):
+-Home Template
+-Profile Template
+-Set up route from home page to profile/other pages
+-add emissions indicator icons
+-connect add button to food log form
+-associate add buttons with the day(id)
+-basic graph(0-100 graph)
+-days need to be associated with graph(id)
+-food form template
+-hook up form to the data base for users to search
+-require to add food and pick meal
+-submit button needs to route back to profile
