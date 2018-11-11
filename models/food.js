@@ -6,4 +6,4 @@ const Food = mongoose.model('Food', {
     other: String
 })
 
-module.exports = Food; 
+module.exports = Food;
