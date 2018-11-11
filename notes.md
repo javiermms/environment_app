@@ -1,9 +1,10 @@
 # **To-Do List(v0):**
-## Home and Profile
+## Home, Navbar and Profile
 - Home Template (done)
 - Sign up button goes to form (done)
-- form creates user and routes to their profile
+- form creates user and routes to their profile (done)
 - Profile Template (done)
+- Hook up Login button to user profile
 
 ## Profile and Food logging
 - add emissions indicator icons
