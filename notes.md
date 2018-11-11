@@ -13,5 +13,6 @@
 - hook up form to the data base for users to search
 - submit button needs to route back to profile
 - associate add buttons with the day(id)
+- make user form responsive
 - (stretch) basic graph(0-100 graph)
 - (stretch) days need to be associated with graph(id)
