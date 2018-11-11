@@ -15,7 +15,15 @@ module.exports = function (app) {
     app.get('/form', (req, res) => {
         res.render('form');
     })
-    // Profile Show
+    // CREATE
+    app.post('/profiles', (req, res) => {
+        Profile.create(req.body).then((profile) => {
+            res.redirect('/');
+        }).catch((err) => {
+            console.log(err.message);
+        });
+    });
+    // SHOW
     app.get('/profiles/:id', (req, res) => {
         res.render('profile', {});
     })

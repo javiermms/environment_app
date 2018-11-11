@@ -1,14 +1,14 @@
 # **To-Do List(v0):**
 ## Home and Profile
-- Home Template
-- Sign up button goes to form
+- Home Template (done)
+- Sign up button goes to form (done)
 - form creates user and routes to their profile
-- Profile Template
+- Profile Template (done)
 
 ## Profile and Food logging
 - add emissions indicator icons
-- connect add button to food log form
 - food form template
+- connect add button to food log form
 - require to add food and pick meal
 - hook up form to the data base for users to search
 - submit button needs to route back to profile

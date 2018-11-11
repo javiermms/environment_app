@@ -1,0 +1,24 @@
+
+<fieldset>
+    <legend>Sign Up</legend>
+    <!-- Username -->
+    <div class="form-group">
+        <label for="username">Username</label><br>
+        <input class="form-control" id="username" type="text" name="username" value="{{profile.username}}"/>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+        <label for="email">Email Address</label><br>
+        <input class="form-control" id="email" type="text" name="email" value="{{profile.email}}" />
+    </div>
+
+    <!-- Bio -->
+    <div class="form-group">
+        <label for="bio">Bio</label><br>
+        <textarea class="form-control" id="bio" name="bio" rows="10" />{{profile.bio}}</textarea>
+    </div>
+</fieldset>
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
