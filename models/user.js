@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/envi', { useNewUrlParser: true });
 
-const Food = mongoose.model('Food', {
-    title: String,
+const Profile = mongoose.model('Profile', {
+    username: String,
     other: String
 })
 
-module.exports = Food;
+module.exports = Profile;
