@@ -19,6 +19,7 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 
 require('./controllers/foods.js')(app);
+require('./controllers/profiles.js')(app);
 
 app.listen(process.env.PORT || 3000, () => {
     console.log('Envi App listening on port 3000!')

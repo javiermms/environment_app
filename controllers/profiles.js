@@ -1,5 +1,11 @@
 const Profile = require('../models/profile');
 
+const sampleProfile = {
+    "username": "enviuser",
+    "email": "user@envi.com",
+    "bio": "I love using envi!"
+}
+
 module.exports = function (app) {
     // Root
     app.get('/', (req, res) => {
@@ -7,7 +13,7 @@ module.exports = function (app) {
     })
     // Form Page
     app.get('/form', (req, res) => {
-        res.render('sign-up');
+        res.render('form');
     })
     // Profile Show
     app.get('/profiles/:id', (req, res) => {
