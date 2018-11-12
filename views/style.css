@@ -1,20 +1,9 @@
 /* Put your css in here */
-.input-bar {
-    display: table;
-    width: 100%;
-    color: red;
+input,
+label {
+    margin: .4rem 0;
 }
 
-.input-bar-item {
-    display: table-cell;
-    color: red;
-}
-
-.input-bar-item > button {
-    margin-left: 5px;
-    color: red;
-}
-
-.width100 {
-  width: 100%;
+.note {
+    font-size: .8em;
 }
