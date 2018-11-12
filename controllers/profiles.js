@@ -11,13 +11,15 @@ module.exports = function (app) {
     app.get('/', (req, res) => {
         res.render('index');
     })
+    app.get('/login', (req, res) => {
+        res.render('login')
+    })
     // Form Page; this is like our /profiles/new route
     app.get('/form', (req, res) => {
         res.render('sign-up');
     })
     // CREATE
     app.post('/profiles', (req, res) => {
-        console.log(req.body);
         Profile.create(req.body).then((profile) => {
             console.log(profile);
             res.redirect(`/profiles/${profile._id}`);
