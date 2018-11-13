@@ -5,9 +5,9 @@
         <!-- Username -->
          <label for="username">Username</label><br>
         <div class="input-group">
-            <input class="form-control" id="username" type="text" name="username" value="{{profile.username}}"/>
+            <input class="form-control" id="login-username" type="text" name="username" value="{{profile.username}}"/>
             <span class="input-group-btn">
-                <a href="/">
+                <a href="/profiles/{{profile.id}}">
                     <button class="btn btn-primary" type="button">Submit</button>
                 </a>
             </span>

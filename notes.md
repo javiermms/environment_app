@@ -4,7 +4,7 @@
 
 ## Profile and Food logging
 - login submit button should look for username in database and re-route to /profiles/:id
-- if username not found, should display error message in template 
+- if username not found, should display error message in template
 - add emissions indicator icons (javier)
 - require to add food and pick meal
 - hook up form to the data base for users to search
@@ -14,11 +14,10 @@
 - (stretch) basic graph(0-100 graph)
 - (stretch) days need to be associated with graph(id)
 
-##DONE
+## DONE
 - connect add button to food log form (done)
 - food form template (done)
 - form creates user and routes to their profile (done)
 - Home Template (done)
 - Sign up button goes to form (done)
 - Profile Template (done)
-
