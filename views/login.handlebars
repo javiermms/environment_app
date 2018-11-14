@@ -1,4 +1,4 @@
-<form method="POST" action="">
+<form method="POST" action="/login">
     <fieldset>
         <legend>Log in</legend>
          <a href="/form">If you have not signed up click here</a><br><br>
@@ -7,8 +7,8 @@
         <div class="input-group">
             <input class="form-control" id="login-username" type="text" name="username" value="{{profile.username}}"/>
             <span class="input-group-btn">
-                <a href="/profiles/{{profile.id}}">
-                    <button class="btn btn-primary" type="button">Submit</button>
+                <a href="/login">
+                    <button class="btn btn-primary" type="submit">Submit</button>
                 </a>
             </span>
         </div>
