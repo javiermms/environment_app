@@ -23,7 +23,6 @@ module.exports = function auth(app) {
 
   // SHOW
   app.get('/profiles/:id', (req, res) => {
-    // const user = { username: req.body.username }
     Profile.findById(req.params.id, (err, profile) => {
       res.render('profile', { profile: profile });
     });
