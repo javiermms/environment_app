@@ -30,7 +30,7 @@ require('./controllers/auth.js')(app);
 
 /** Port listener */
 app.listen(PORT, () => {
-    console.log('Envi App listening on port ', PORT)
+    console.log('Envi App listening on port', PORT)
 })
 
 module.exports = app;

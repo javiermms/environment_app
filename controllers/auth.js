@@ -13,6 +13,6 @@ module.exports = function (app) {
             res.redirect(`/profiles/${profile._id}`)
         }).catch((err) => {
             console.log(err.message);
-        })
-    })
-}
+        });
+    });
+};

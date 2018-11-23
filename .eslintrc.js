@@ -7,6 +7,8 @@ module.exports = {
         "mocha": true
     },
     "rules": {
-        "no-console": 0
+        "no-console": "off",
+        "indent": ["error", 4]
+        "indent": ["error", "tab"]
     }
 };
