@@ -24,3 +24,4 @@
 - login submit button should look for username in database and re-route to /profiles/:id (done)
 - if username not found, should display error message in template (done)
 - add public folder with img, js and css subfolders (done)
+- update README

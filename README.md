@@ -22,7 +22,7 @@ This project was developed using MongoDB, Node.js and Express.js in the back-end
 [WIP] We used Mocha and Chai for testing. As with all projects, we aim for 100% test coverage. To run tests for this project, type the command 'mocha' into your console from the root folder.
 
 ## Running
-[WIP] We have plans to deploy this application on Heroku by the end of December. For now, this project is hosted locally at http://localhost:3000/. To check it out, type the command 'npm start' into your console from the root folder.
+[WIP] We have plans to deploy this application on Heroku by the end of December 2018. For now, this project can be accessed at http://localhost:3000/. To check it out, type the command 'npm start' into your console from the root folder.
 
 ## Notes
 For information on what we are currently working on and what we plan to work on in the future, take a look at Notes.md.
