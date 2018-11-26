@@ -4,7 +4,6 @@
 ## Profile and Food logging
 - require to add food on food-index (javier)
 - make profile form responsive (javier)
-- cancel button on food-index and edit forms (javier)
 - make add food work on food-index page (faith)
 - food form submit button needs to route back to profile (faith)
 - maybe start with a table; then graph (faith)
@@ -25,6 +24,7 @@
 - add emissions indicator icons (javier)
 - make home page image responsive (javier)
 - make edit form (javier)
+- cancel button on food-index and edit forms (javier)
 
 ## v1
 - associate add buttons with the day using id (v1)
