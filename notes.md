@@ -2,16 +2,15 @@
 ## Home, Navbar and Profile
 
 ## Profile and Food logging
-- add emissions indicator icons (javier)
-- require to add food and pick meal
-- hook up form to the data base for users to search (faith)
-- food form submit button needs to route back to profile
-- associate add buttons with the day using id
+- make home page image responsive (javier)
+- make edit form (javier)
+- require to add food on food-index (javier)
 - make profile form responsive (javier)
+- cancel button on food-index and edit forms (javier)
+- make add food work on food-index page (faith)
+- food form submit button needs to route back to profile (faith)
 - maybe start with a table; then graph (faith)
-- (stretch) basic graph (0-100 graph)
-- (stretch) days need to be associated with graph (id)
-- (maybe not necessary?) admin dashboard
+- hook up edit food button (faith)
 
 ## DONE
 - connect add button to food log form (done)
@@ -25,3 +24,11 @@
 - if username not found, should display error message in template (done)
 - add public folder with img, js and css subfolders (done)
 - update README
+- add emissions indicator icons (javier)
+
+## v1
+- associate add buttons with the day using id (v1)
+- (stretch) basic graph (0-100 graph)
+- (stretch) days need to be associated with graph (id)
+- hook up form to the data base for users to search (faith)
+- make emissions indicators fully functional

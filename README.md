@@ -27,4 +27,4 @@ This project was developed using MongoDB, Node.js and Express.js in the back-end
 ## Notes
 For information on what we are currently working on and what we plan to work on in the future, take a look at Notes.md.
 
-#### Contributors: Faith Chikwekwe 👩🏾‍💻 , Javier Mendoza 👨🏽‍💻
+#### Contributors: Faith Chikwekwe 👩🏾‍💻, Javier Mendoza 👨🏽‍💻
