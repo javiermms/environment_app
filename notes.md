@@ -2,12 +2,14 @@
 ## Home, Navbar and Profile
 
 ## Profile and Food logging
-- make home page image responsive (javier)
-- make edit form (javier)
 - require to add food on food-index (javier)
 - make profile form responsive (javier)
+<<<<<<< HEAD
 - cancel button on food-index and edit forms (javier)
 - make 'add food' work on food-index page (faith)
+=======
+- make add food work on food-index page (faith)
+>>>>>>> 20e63464adac68f7950505ec970a8d20abd64b96
 - food form submit button needs to route back to profile (faith)
 - maybe start with a table; then graph (faith)
 - hook up edit food button (faith)
@@ -25,6 +27,9 @@
 - add public folder with img, js and css subfolders (done)
 - update README
 - add emissions indicator icons (javier)
+- make home page image responsive (javier)
+- make edit form (javier)
+- cancel button on food-index and edit forms (javier)
 
 ## v1
 - associate add buttons with the day using id (v1)
