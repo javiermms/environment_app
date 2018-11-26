@@ -12,7 +12,7 @@
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">Delete item</th>
+            <th scope="col">Delete Item</th>
             <th scope="col">Food Name</th>
             <th scope="col">Description</th>
         </tr>
@@ -20,56 +20,56 @@
     <tbody>
         <tr id="">
             <th scope="row">
-                <button class="btn btn-primary" type="submit">Delete</button>
+                <input type="checkbox"/>
             </th>
             <td>beef</td>
             <td>this is about the beef</td>
         </tr>
         <tr id="">
             <th scope="row">
-                <button class="btn btn-primary" type="submit">Delete</button>
+                <input type="checkbox"/>
             </th>
             <td>chicken</td>
             <td>this is about the chicken</td>
         </tr>
         <tr id="">
             <th scope="row">
-                <button class="btn btn-primary" type="submit">Delete</button>
+                <input type="checkbox"/>
             </th>
             <td>fish</td>
             <td>this is about the fish</td>
         </tr>
         <tr id="">
             <th scope="row">
-                <button class="btn btn-primary" type="submit">Delete</button>
+                <input type="checkbox"/>
             </th>
             <td>eggs</td>
             <td>this is about the eggs</td>
         </tr>
         <tr id="">
             <th scope="row">
-                <button class="btn btn-primary" type="submit">Delete</button>
+                <input type="checkbox"/>
             </th>
             <td>milk</td>
             <td>this is about the milk</td>
         </tr>
         <tr id="">
             <th scope="row">
-                <button class="btn btn-primary" type="submit">Delete</button>
+                <input type="checkbox"/>
             </th>
             <td>cheese</td>
             <td>this is about the cheese</td>
         </tr>
         <tr id="">
             <th scope="row">
-                <button class="btn btn-primary" type="submit">Delete</button>
+                <input type="checkbox"/>
             </th>
             <td>vegetables</td>
             <td>this is about the vegetables</td>
         </tr>
         <tr id="">
             <th scope="row">
-                <button class="btn btn-primary" type="submit">Delete</button>
+                <input type="checkbox"/>
             </th>
             <td>legumes</td>
             <td>this is about the legumes</td>
@@ -78,7 +78,7 @@
 </table>
 
 <div class="container-fluid" style="float: right;">
-  <a href="/profiles">
-      <button class="btn btn-primary" type="button">Cancel</button>
-  </a>
+  <p><form method="POST" action="/reviews/{{review._id}}?_method=DELETE">
+        <button class="btn btn-primary" type="submit">Delete</button>
+    </form></p>
 </div>
