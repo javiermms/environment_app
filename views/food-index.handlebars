@@ -1,12 +1,13 @@
 <legend>Add Food</legend>
 
 <div class="input-group">
-   <input type="text" class="form-control" id="search" type="search" name="search" placeholder="Look up food here">
+    <h3>Search function coming soon!</h3>
+   <!-- <input type="text" class="form-control" id="search" type="search" name="search" placeholder="Look up food here">
    <span class="input-group-btn">
         <a href="/profiles">
           <button class="btn btn-primary" type="button">Search</button>
         </a>
-   </span>
+   </span> -->
 </div>
 
 <table class="table">
@@ -15,65 +16,20 @@
             <th scope="col">Add Item</th>
             <th scope="col">Food Name</th>
             <th scope="col">Description</th>
+            <th scope="col">Carbon Output</th>
         </tr>
     </thead>
     <tbody>
+        {{#each foods}}
         <tr id="">
             <th scope="row">
                 <input type="checkbox"/>
             </th>
-            <td>beef</td>
-            <td>this is about the beef</td>
+            <td>{{this.name}}</td>
+            <td>{{this.description}}</td>
+            <td>{{this.CO2e}} CO2e</td>
         </tr>
-        <tr id="">
-            <th scope="row">
-                <input type="checkbox"/>
-            </th>
-            <td>chicken</td>
-            <td>this is about the chicken</td>
-        </tr>
-        <tr id="">
-            <th scope="row">
-                <input type="checkbox"/>
-            </th>
-            <td>fish</td>
-            <td>this is about the fish</td>
-        </tr>
-        <tr id="">
-            <th scope="row">
-                <input type="checkbox"/>
-            </th>
-            <td>eggs</td>
-            <td>this is about the eggs</td>
-        </tr>
-        <tr id="">
-            <th scope="row">
-                <input type="checkbox"/>
-            </th>
-            <td>milk</td>
-            <td>this is about the milk</td>
-        </tr>
-        <tr id="">
-            <th scope="row">
-                <input type="checkbox"/>
-            </th>
-            <td>cheese</td>
-            <td>this is about the cheese</td>
-        </tr>
-        <tr id="">
-            <th scope="row">
-                <input type="checkbox"/>
-            </th>
-            <td>vegetables</td>
-            <td>this is about the vegetables</td>
-        </tr>
-        <tr id="">
-            <th scope="row">
-                <input type="checkbox"/>
-            </th>
-            <td>legumes</td>
-            <td>this is about the legumes</td>
-        </tr>
+        {{/each}}
     </tbody>
 </table>
 

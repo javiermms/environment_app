@@ -1,8 +1,32 @@
 <h2>Welcome, {{profile.username}}!</h2>
 
 <legend>Graph</legend>
-<div style="width:1000px;height:400px;border:0px solid #000;"></div>
-  
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Meal Eaten</th>
+                <th scope="col">Food Name</th>
+                <th scope="col">Carbon Output</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="">
+                <th scope="row">(Example) Breakfast</th>
+                <td>beef</td>
+                <td>20 CO2e</td>
+            </tr>
+            {{#each food}}
+            <tr id="">
+                <th scope="row">{{food.meal}}</th>
+                <td>{{food.name}}</td>
+                <td>{{food.CO2e}} CO2e</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+
 <fieldset>
   <legend>Day of the Week</legend>
 
@@ -27,7 +51,7 @@
       <ins>|</ins>
       <a href="#">Edit Food</a>
     </div>
-  
+
   <hr>
   </div>
 
