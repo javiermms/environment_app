@@ -1,19 +1,17 @@
-const Food = require('../models/food');
+const Food = require('../models/food.js');
 
-module.exports = function (app) {
-    // Root
+module.exports = (app) => {
+    // Food Index
+
     app.get('/foods', (req, res) => {
-        res.render('food-index');
-    })
-
-    // Update
-    // get the food name from index form
-    // search the database
-    app.put('/foods', (req, res) => {
-        const query = { name: req.body.name }
-        Food.findOne(query).then((food) =>{
-            Profile.update
-        })
-    })
+        const test = Food.find()
+        .then(foods => {
+            console.log(test)
+            console.log(foods)
+            res.render('food-index', { foods: foods });
+        }).catch((err) => {
+            console.log(err.message);
+        });
+    });
 
 }

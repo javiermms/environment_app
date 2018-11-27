@@ -14,13 +14,18 @@ module.exports = function auth(app) {
   // CREATE
   app.post('/profiles', (req, res) => {
       const query = { username: req.body.username }
+      console.log(query)
       Profile.findOne(query).then((profile) => {
-          const userExists = req.body.id;
+          let userExists = req.body._id;
           console.log(userExists);
           // check if the username already exists in database
-          if (req.body.id == undefined || req.body.id == null) {
+          if (req.body._id) {
               Profile.findById(req.params.id, (err, profile) => {
                   console.log(req.params.id)
+                  let userExists = true
+                  res.redirect(`/form`);
+              }).catch((err) => {
+                  console.log(err.message);
               })
           // if it doesn't, then create profile and render it
           } else {
