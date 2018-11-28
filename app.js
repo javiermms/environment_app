@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000;
 
 /** Database connection */
 const mongoose = require('mongoose');
-
+const MONGOBD_URI = require('mongodb://heroku_hgv48cf6:h09u1ue67ec5piefh7n5h2slsp@ds153352.mlab.com:53352/heroku_hgv48cf6');
 mongoose.connect(process.env.MONGOBD_URI || 'mongodb://localhost/envi', { useNewUrlParser: true });
 let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
