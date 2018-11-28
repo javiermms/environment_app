@@ -48,7 +48,7 @@ module.exports = function auth(app) {
       Food.findOne(query)
       .then((food) => {
           console.log(food);
-          Profile.findByIdAndUpdate(req.params.id,
+          Profile.findOneAndUpdate(req.params.id,
           {$push: { foods: food }})
             .then(profile => {
                 res.redirect(`/profiles/${profile._id}`)
@@ -56,17 +56,18 @@ module.exports = function auth(app) {
             });
       });
       // UPDATE and REMOVE FOOD
-      // app.put('/profiles/:id/delete', (req, res) => {
-      //     const query = { _id: Object.keys(req.body)[0] }
-      //     Food.findOne(query)
-      //     .then((food) => {
-      //         Profile.findByIdAndUpdate(req.params.id,
-      //         {$pull: { foods: food }})
-      //         .then(profile => {
-      //             res.redirect(`/profiles/${profile._id}`)
-      //         });
-      //     });
-      // });
+      app.put('/profiles/:id/delete', (req, res) => {
+          const query = { _id: Object.keys(req.body)[0] }
+          Food.findOne(query)
+          .then((food) => {
+              Profile.findOneAndUpdate(req.params.id,
+              {$pull: { foods: food }},
+              { safe: true, upsert: true })
+              .then(profile => {
+                  res.redirect(`/profiles/${profile._id}`)
+              });
+          });
+      });
 
     // EDIT
     app.get('/profiles/:id/edit', (req, res) => {
@@ -79,15 +80,13 @@ module.exports = function auth(app) {
         });
     });
     // DELETE
-    app.get('/profiles/:id', (req, res) => {
-        Profile.findByIdAndDelete(req.params.id)
-        .then((profile) => {
+    app.delete('/profiles/:id', function (req, res) {
+        Profile.findByIdAndRemove(req.params.id)
+        .then(profile => {
             console.log('sucessfully deleted')
             res.redirect(`/`);
         }).catch((err) => {
             console.log(err.message);
-        })
+        });
     });
 };
-
-// return the foods as an array app.get

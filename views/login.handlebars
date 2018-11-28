@@ -1,7 +1,10 @@
 <form method="POST" action="/login">
     <fieldset>
         <legend>Log in</legend>
-         <a href="/form">If you have not signed up click here</a><br><br>
+        <!-- {{#unless alreadyUser}}
+        <p style="color: red">Hmm...it looks like you don't have a profile.</p>
+        {{/unless}} -->
+         <a href="/form">If you have not yet signed up, click here!</a><br><br>
         <!-- Username -->
         <label for="username">Username</label><br>
         <div class="input-group">

@@ -25,7 +25,7 @@
                 <th>
                     <a href="/profiles/{{profile.id}}/foods">Add Food</a>
                 <ins>|</ins>
-                    <a href="/profiles/{{profile._id}}/edit">Delete Food</a>
+                    <a href="/profiles/{{profile.id}}/edit">Delete Food</a>
                 </th>
                 <th></th>
             </tr>
@@ -40,7 +40,7 @@
                           <g id="UrTavla">
                           <circle cx="50" cy="50" r="40" stroke="#4AFA75" stroke-width="3" fill="green">
                           </circle>
-                          <text x="50%" y="50%" text-anchor="middle" dy=".3em">100</text>
+                          <text x="50%" y="50%" text-anchor="middle" dy=".3em"></text>
                           </g>
                         </svg>
                     </div>
@@ -52,8 +52,7 @@
 <br>
 <br>
 <br>
-<br>
-<form action="/profiles/{{profile.id}}?_method=DELETE" method="POST">
+<form method="POST" action="/profiles/{{profile._id}}?_method=DELETE">
     <h3>
         <button type="submit">DELETE MY PROFILE</button>
     </h3>

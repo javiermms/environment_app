@@ -1,4 +1,5 @@
 const Profile = require('../models/profile');
+let alreadyUser = true;
 
 module.exports = function (app) {
     // SIGN-UP GET
@@ -13,7 +14,14 @@ module.exports = function (app) {
     app.post('/login', (req, res) => {
         const query = { username: req.body.username }
         Profile.findOne(query).then((profile) => {
-            res.redirect(`/profiles/${profile._id}`)
+            console.log("profile:", profile)
+            if (profile != null | profile != undefined) {
+                res.redirect(`/profiles/${profile._id}`)
+            } else {
+                let alreadyUser = false;
+                console.log("no user")
+                res.redirect(`/login`)
+            }
         }).catch((err) => {
             console.log(err.message);
         });
