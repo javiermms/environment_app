@@ -1,13 +1,13 @@
 <legend>Edit Food Items</legend>
 
-<div class="input-group">
+<!-- <div class="input-group">
    <input type="text" class="form-control" id="search" type="search" name="search" placeholder="Look up food here">
    <span class="input-group-btn">
         <a href="/profiles">
           <button class="btn btn-primary" type="button">Search</button>
         </a>
    </span>
-</div>
+</div> -->
 
 <table class="table">
     <thead>
@@ -26,7 +26,9 @@
             <td>{{this.name}}</td>
             <td>{{this.CO2e}}</td>
         {{else}}
-        <p>Nothing to delete</p>
+        <td>Nothing to delete</td>
+        <td>Nothing to delete</td>
+        <td></td>
         {{/each}}
         </tr>
     </tbody>

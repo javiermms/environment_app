@@ -48,9 +48,10 @@ module.exports = function auth(app) {
       Food.findOne(query)
       .then((food) => {
           console.log(food);
-          Profile.findOneAndUpdate(req.params.id,
+          Profile.findByIdAndUpdate(req.params.id,
           {$push: { foods: food }})
             .then(profile => {
+                console.log(profile)
                 res.redirect(`/profiles/${profile._id}`)
                 });
             });
