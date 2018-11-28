@@ -5,8 +5,6 @@
 - look into express basic auth
 - require to add food on food-index (javier)
 - make profile form responsive (javier)
-- make 'submit' work on food-index page (faith)
-- food form submit button needs to route back to profile and update user profile (faith)
 - hook up edit food button (faith)
 
 ## DONE
@@ -26,6 +24,8 @@
 - make edit form (javier)
 - cancel button on food-index and edit forms (javier)
 - maybe start with a table; then graph (faith)
+- make 'submit' work on food-index page (faith)
+- food form submit button needs to route back to profile and update user profile (faith)
 
 ## v1
 - associate add buttons with the day using id (v1)
@@ -90,3 +90,6 @@ meals => foods (embedded)
         }
     ]
 }
+
+
+create model with profile id and food id

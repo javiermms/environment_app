@@ -1,37 +1,69 @@
 <h2>Welcome, {{profile.username}}!</h2>
 
-<legend>Graph</legend>
+<legend>Foods You've Eaten Today:</legend>
 <div>
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">Meal Eaten</th>
                 <th scope="col">Food Name</th>
                 <th scope="col">Carbon Output</th>
             </tr>
         </thead>
         <tbody>
             <tr id="">
-                <th scope="row">(Example) Breakfast</th>
-                <td>beef</td>
-                <td>20 CO2e</td>
+                <td scope="row">(Example) beef</td>
+                <td>27 CO2e</td>
             </tr>
-            {{#each food}}
+            {{#each profile.foods}}
             <tr id="">
-                <th scope="row">{{food.meal}}</th>
-                <td>{{food.name}}</td>
-                <td>{{food.CO2e}} CO2e</td>
+                <td>{{this.name}}</td>
+                <td>{{this.CO2e}} CO2e</td>
             </tr>
             {{/each}}
+            <tr>
+            <tr>
+                <th>
+                    <a href="/profiles/{{profile.id}}/foods">Add Food</a>
+                <ins>|</ins>
+                    <a href="/profiles/{{profile._id}}/edit">Delete Food</a>
+                </th>
+                <th></th>
+            </tr>
+                <th>Total Carbon Output:</th>
+                <th>ok</th>
+            </tr>
+            <tr>
+                <th>Your carbon indicator:</th>
+                <th>
+                    <div>
+                        <svg height="100" width="100">
+                          <g id="UrTavla">
+                          <circle cx="50" cy="50" r="40" stroke="#4AFA75" stroke-width="3" fill="green">
+                          </circle>
+                          <text x="50%" y="50%" text-anchor="middle" dy=".3em">100</text>
+                          </g>
+                        </svg>
+                    </div>
+              </th>
+            </tr>
         </tbody>
     </table>
 </div>
+<br>
+<br>
+<br>
+<br>
+<form action="/profiles/{{profile.id}}?_method=DELETE" method="POST">
+    <h3>
+        <button type="submit">DELETE MY PROFILE</button>
+    </h3>
+</form>
 
 <fieldset>
-  <legend>Today's Meals</legend>
+  <!-- <legend>Today's Meals</legend> -->
 
   <!-- Breakfast -->
-  <div class="container">
+  <!-- <div class="container">
   <div class="pull-right">
     <svg height="100" width="100">
       <g id="UrTavla">
@@ -42,23 +74,23 @@
     </svg>
   </div>
   <h2>Breakfast</h2>
-  {{#each profile.foods}}
-    <p>{{this}}</p>
-    <p>Food Item Two</p>
-    <p>Food Item Three</p>
-    <p>Food Item Four</p>
-  {{/each}}
+    {{#each profile.foods}}
+    <p>{{this.name}}</p>
+    {{else}}
+    <p>You haven't logged any food yet.</p>
+    {{/each}}
+
     <div>
-      <a href="/foods">Add Food</a>
+      <a href="/profiles/{{profile.id}}/foods">Add Food</a>
       <ins>|</ins>
       <a href="#">Edit Food</a>
     </div>
 
   <hr>
-  </div>
+  </div> -->
 
   <!-- Lunch -->
-  <div class="container">
+  <!-- <div class="container">
     <div class="pull-right">
     <svg height="100" width="100">
       <g id="UrTavla">
@@ -74,16 +106,16 @@
     <p>Food Item Three</p>
     <p>Food Item Four</p>
     <div class="topcorner">
-      <a href="/foods">Add Food</a>
+      <a href="/profiles/{{profile.id}}/foods">Add Food</a>
       <ins>|</ins>
       <a href="#">Edit Food</a>
     </div>
 
   <hr>
-  </div>
+  </div> -->
 
   <!-- Dinner -->
-  <div class="container">
+  <!-- <div class="container">
     <div class="pull-right">
     <svg height="100" width="100">
       <g id="UrTavla">
@@ -99,15 +131,15 @@
     <p>Food Item Three</p>
     <p>Food Item Four</p>
     <div class="topcorner">
-      <a href="/foods">Add Food</a>
+      <a href="/profiles/{{profile.id}}/foods">Add Food</a>
       <ins>|</ins>
       <a href="#">Edit Food</a>
     </div>
   <hr>
-  </div>
+  </div> -->
 
   <!-- Snacks -->
-  <div class="container">
+  <!-- <div class="container">
     <div class="pull-right">
     <svg height="100" width="100">
       <g id="UrTavla">
@@ -123,10 +155,10 @@
     <p>Food Item Three</p>
     <p>Food Item Four</p>
     <div class="topcorner">
-      <a href="/foods">Add Food</a>
+      <a href="/profiles/{{profile.id}}/foods">Add Food</a>
       <ins>|</ins>
       <a href="#">Edit Food</a>
     </div>
-  <hr>
+  <hr> -->
   </fieldset>
   </div>

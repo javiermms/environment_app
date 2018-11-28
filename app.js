@@ -29,6 +29,19 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 
 /** Load Routes */
+app.get('profiles/:id/foods', (req, res) => {
+    console.log('got it')
+    res.render('food-index');
+    // Profile.findById(req.params.id)
+    // .then(profile => {
+    //     Food.find({})
+    //     .then((foods) => {
+    //         res.render('food-index', { profile: profile, foods: foods });
+    //     }).catch((err) => {
+    //         console.log(err.message);
+    //     });
+    // });
+});
 require('./controllers/foods.js')(app);
 require('./controllers/profiles.js')(app);
 require('./controllers/auth.js')(app);

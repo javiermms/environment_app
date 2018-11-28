@@ -1,21 +1,25 @@
-const Food = require('../models/food.js');
+const Food = require('../models/food');
+const Profile = require('../models/profile');
 
 module.exports = (app) => {
     // FOOD INDEX
-    app.get('/foods', (req, res) => {
-        const test = Food.find({})
-        .then((foods) => {
-            res.render('food-index', { foods: foods });
-        }).catch((err) => {
-            console.log(err.message);
+    app.get('/profiles/:id/foods', (req, res) => {
+        Profile.findById(req.params.id)
+        .then(profile => {
+            Food.find({})
+            .then((foods) => {
+                res.render('food-index', { profile: profile, foods: foods });
+            }).catch((err) => {
+                console.log(err.message);
+            });
         });
     });
-    
+
     // CREATE FOOD
-    app.post('/foods', (req, res) =>{
+    app.post('/profiles/:id/foods', (req, res) =>{
         Food.create(req.body)
             .then((food) =>{
-                res.redirect(`/foods`);
+                res.redirect(`/profiles/:id/foods`);
             })
             .catch((err) =>{
                 console.log(err.message);

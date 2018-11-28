@@ -22,19 +22,21 @@
         <tbody>
             {{#each foods}}
             <tr id="{{this._id}}">
-                <th scope="row"><input type="checkbox"/></th>
+                <th scope="row">
+                    <input type="checkbox" name="{{this._id}}" id="{{this._id}}"/>
+                </th>
                 <td>{{this.name}}</td>
                 <td>{{this.description}}</td>
                 <td>{{this.CO2e}} CO2e</td>
             {{else}}
-                <td>No foods yet...</td>
+                <td>No food yet...</td>
             {{/each}}
             </tr>
         </tbody>
     </table>
 
     <div class="container-fluid" style="float: right;">
-        <button class="btn btn-primary" type="button">Cancel</button>
+        <button class="btn btn-primary" type="reset">Cancel</button>
         <button class="btn btn-primary" type="submit">Submit</button>
     </div>
 </form>
