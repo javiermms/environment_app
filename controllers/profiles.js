@@ -11,7 +11,7 @@ module.exports = function auth(app) {
     res.render('sign-up');
   });
 
-  // CREATE
+  // CREATE (TODO: Change to /SIGN-UP and move to AUTH)
   app.post('/profiles', (req, res) => {
       const query = { username: req.body.username }
       console.log(query)
@@ -44,4 +44,18 @@ module.exports = function auth(app) {
       res.render('profile', { profile: profile });
     });
   });
+
+  // UPDATE PROFILE
+  app.put('/profiles/:id', (req, res) => {
+      Profile.findbyIdAndUpdate(req.params.id)
+        .then(profile => {
+            // find the foods
+            Food.find({ id: req.body._id })
+            console.log("_id:", req.body._id)
+        })
+        .catch((err) => {
+            console.log(err.message)
+        })
+  })
+
 };

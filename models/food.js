@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/envi', { useNewUrlParser: true });
+const Schema = mongoose.Schema;
 
-const Food = mongoose.model('Foods', {
-    name: String,
-    description: String,
-    CO2e: Number
-})
+const FoodSchema = new Schema({
+    name: { type: String },
+    description: { type: String },
+    CO2e: { type: Number }
+});
 
-module.exports = Food;
+module.exports = mongoose.model('food', FoodSchema);

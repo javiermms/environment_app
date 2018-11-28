@@ -42,10 +42,12 @@
     </svg>
   </div>
   <h2>Breakfast</h2>
-    <p>Food Item One</p>
+  {{#each profile.foods}}
+    <p>{{this}}</p>
     <p>Food Item Two</p>
     <p>Food Item Three</p>
     <p>Food Item Four</p>
+  {{/each}}
     <div>
       <a href="/foods">Add Food</a>
       <ins>|</ins>

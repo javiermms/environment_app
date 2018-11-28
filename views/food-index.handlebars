@@ -1,5 +1,5 @@
 <legend>Add Food</legend>
-<form action="/profiles" method="POST">
+<form action="/profiles/{{profile._id}}?_method=PUT" method="POST">
     <div class="input-group">
         <h3>Search function coming soon!</h3>
        <!-- <input type="text" class="form-control" id="search" type="search" name="search" placeholder="Look up food here">
@@ -20,8 +20,8 @@
             </tr>
         </thead>
         <tbody>
-            {{#each Foods}}
-            <tr id="listFoods-{{@index}}">
+            {{#each foods}}
+            <tr id="{{this._id}}">
                 <th scope="row"><input type="checkbox"/></th>
                 <td>{{this.name}}</td>
                 <td>{{this.description}}</td>
@@ -34,11 +34,7 @@
     </table>
 
     <div class="container-fluid" style="float: right;">
-        <a href="#">
-            <button class="btn btn-primary" type="button">Cancel</button>
-        </a>
-        <a href="/profiles">
-            <button class="btn btn-primary" type="button">Submit</button>
-        </a>
+        <button class="btn btn-primary" type="button">Cancel</button>
+        <button class="btn btn-primary" type="submit">Submit</button>
     </div>
 </form>

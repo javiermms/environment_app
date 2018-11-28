@@ -1,17 +1,24 @@
 const Food = require('../models/food.js');
 
 module.exports = (app) => {
-    // Food Index
-
+    // FOOD INDEX
     app.get('/foods', (req, res) => {
-        const test = Food.find()
-        .then(foods => {
-            console.log(test)
-            console.log(foods)
+        const test = Food.find({})
+        .then((foods) => {
             res.render('food-index', { foods: foods });
         }).catch((err) => {
             console.log(err.message);
         });
     });
-
+    
+    // CREATE FOOD
+    app.post('/foods', (req, res) =>{
+        Food.create(req.body)
+            .then((food) =>{
+                res.redirect(`/foods`);
+            })
+            .catch((err) =>{
+                console.log(err.message);
+            })
+    });
 }
