@@ -5,7 +5,6 @@
 - look into express basic auth
 - require to add food on food-index (javier)
 - make profile form responsive (javier)
-- hook up edit food button (faith)
 
 ## DONE
 - connect add button to food log form (done)
@@ -26,11 +25,12 @@
 - maybe start with a table; then graph (faith)
 - make 'submit' work on food-index page (faith)
 - food form submit button needs to route back to profile and update user profile (faith)
+- hook up edit food button (faith)
 
-## v1
-- associate add buttons with the day using id (v1)
-- (stretch) basic graph (0-100 graph)
-- (stretch) days need to be associated with graph (id)
+## **To-Do List(v1):**
+- associate add buttons with the day using id 
+- basic graph (0-100 graph)
+- days need to be associated with graph
 - hook up form to the data base for users to search (faith)
 - make emissions indicators fully functional
 
