@@ -61,7 +61,7 @@ module.exports = function auth(app) {
           const query = { _id: Object.keys(req.body)[0] }
           Food.findOne(query)
           .then((food) => {
-              Profile.findOneAndUpdate(req.params.id,
+              Profile.findByIdAndUpdate(req.params.id,
               {$pull: { foods: food }},
               { safe: true, upsert: true })
               .then(profile => {
