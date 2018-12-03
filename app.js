@@ -46,9 +46,12 @@ require('./controllers/foods.js')(app);
 require('./controllers/profiles.js')(app);
 require('./controllers/auth.js')(app);
 
+const port = process.env.PORT || 5000;
+
 /** Port listener */
 app.listen(PORT, () => {
     console.log('Envi App listening on port', PORT)
 })
+
 
 module.exports = app;
