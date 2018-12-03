@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000;
 
 /** Database connection */
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGOBD_URI || 'mongodb://localhost/envi', { useNewUrlParser: true });
+mongoose.connect(process.env.MONGOBD_URI || 'mongodb://localhost:27017/envi', { useNewUrlParser: true });
 let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
