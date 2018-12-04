@@ -10,30 +10,19 @@
        </span> -->
     </div>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Add Item</th>
-                <th scope="col">Food Name</th>
-                <th scope="col">Description</th>
-                <th scope="col">Carbon Output</th>
-            </tr>
-        </thead>
-        <tbody>
+
+    <select class="" name="">
+        <th scope="row">
             {{#each foods}}
-            <tr id="{{this._id}}">
-                <th scope="row">
-                    <input type="checkbox" name="{{this._id}}" id="{{this._id}}"/>
-                </th>
-                <td>{{this.name}}</td>
-                <td>{{this.description}}</td>
-                <td>{{this.CO2e}} CO2e</td>
+            <option value="{{this._id}}">
+                {{this.name}}, {{this.description}}, {{this.CO2e}}
+            </option>
             {{else}}
-                <td>No food yet...</td>
+            <option value="{{this._id}}">
+                No food yet...
+            </option>
             {{/each}}
-            </tr>
-        </tbody>
-    </table>
+    </select>
 
     <div class="container-fluid" style="float: right;">
         <button class="btn btn-primary" type="reset">Cancel</button>

@@ -43,10 +43,9 @@ module.exports = function auth(app) {
 
     // UPDATE and ADD FOOD
     app.put('/profiles/:id', (req, res) => {
-      const query = { _id: Object.keys(req.body)[0] }
-      console.log(query);
-      Food.findOne(query)
-      .then((food) => {
+        const query = { _id: Object.keys(req.body)[0] }
+        Food.findOne(query)
+        .then((food) => {
           console.log(food);
           Profile.findByIdAndUpdate(req.params.id,
           {$push: { foods: food }})
@@ -54,7 +53,9 @@ module.exports = function auth(app) {
                 console.log(profile)
                 res.redirect(`/profiles/${profile._id}`)
                 });
-            });
+            }).catch((err) => {
+                console.log(err.message);
+            })
       });
       // UPDATE and REMOVE FOOD
       app.put('/profiles/:id/delete', (req, res) => {

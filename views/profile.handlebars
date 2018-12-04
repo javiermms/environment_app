@@ -17,7 +17,7 @@
             {{#each profile.foods}}
             <tr id="">
                 <td>{{this.name}}</td>
-                <td>{{this.CO2e}} CO2e</td>
+                <td class="carbon" data-carbon="{{this.CO2e}}">{{this.CO2e}} CO2e</td>
             </tr>
             {{/each}}
             <tr>

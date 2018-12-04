@@ -33,6 +33,7 @@
 - days need to be associated with graph
 - hook up form to the data base for users to search (faith)
 - make emissions indicators fully functional
+- write out an ERD (paper or whiteboard)
 
 
 // app.js
