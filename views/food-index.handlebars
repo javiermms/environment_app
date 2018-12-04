@@ -11,14 +11,14 @@
     </div>
 
 
-    <select class="" name="">
+    <select class="" name="foodSelect">
         <th scope="row">
             {{#each foods}}
             <option value="{{this._id}}">
                 {{this.name}}, {{this.description}}, {{this.CO2e}}
             </option>
             {{else}}
-            <option value="{{this._id}}">
+            <option value="">
                 No food yet...
             </option>
             {{/each}}

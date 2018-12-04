@@ -34,6 +34,8 @@
 - hook up form to the data base for users to search (faith)
 - make emissions indicators fully functional
 - write out an ERD (paper or whiteboard)
+- vegetarianism detection
+- use executive summaries to makes the front page more informative
 
 
 // app.js
