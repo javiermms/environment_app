@@ -5,15 +5,24 @@
         <p style="color: red">Hmm...it looks like you don't have a profile.</p>
         {{/unless}} -->
          <a href="/form">If you have not yet signed up, click here!</a><br><br>
-        <!-- Username -->
-        <label for="username">Username</label><br>
-        <div class="input-group">
-            <input class="form-control" id="login-username" type="text" name="username" value="{{profile.username}}"/>
-            <span class="input-group-btn">
-                <a href="/login">
-                    <button class="btn btn-primary" type="submit">Submit</button>
-                </a>
-            </span>
+         <div class="input-group">
+            <!-- Username -->
+            <label for="username">Username</label><br>
+            <input class="form-control" id="loginUsername" type="text" name="username" value="{{profile.username}}"/>
+
+            <!-- Password -->
+            <label for="password">Password</label><br>
+            <input class="form-control" id="loginPassword" type="text" name="password" value="{{profile.password}}"/>
+
+            <br>
+            <br>
         </div>
+        
+        <span class="input-group-btn">
+            <a href="/login">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </a>
+        </span>
+
     </fieldset>
 </form>
