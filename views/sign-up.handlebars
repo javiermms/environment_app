@@ -7,20 +7,15 @@
         {{/if}}
         <div class="form-group">
             <label for="username">Username</label><br>
-            <input class="form-control" id="username" type="text" name="username" value="{{profile.username}}"/>
+            <input class="form-control" id="username" type="text" name="username" placeholder="username"/>
         </div>
 
         <!-- Email -->
         <div class="form-group">
-            <label for="email">Email Address</label><br>
-            <input class="form-control" id="email" type="text" name="email" value="{{profile.email}}" />
+            <label for="password">Password</label><br>
+            <input class="form-control" id="password" type="text" name="password" placeholder="password" />
         </div>
 
-        <!-- Bio -->
-        <div class="form-group">
-            <label for="bio">Bio</label><br>
-            <textarea class="form-control" id="bio" name="bio" rows="10" />{{profile.bio}}</textarea>
-        </div>
         <div class="form-group">
             <a href="/profiles">
                 <button class="btn btn-primary" type="submit">Submit</button>

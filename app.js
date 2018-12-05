@@ -1,6 +1,7 @@
 /*
 *  Panda Dreams main server
 */
+require('dotenv').config()
 const express = require('express');
 const methodOverride = require('method-override');
 const bodyParser = require('body-parser');
@@ -41,6 +42,7 @@ app.get('profiles/:id/foods', (req, res) => {
     //     });
     // });
 });
+
 require('./controllers/foods.js')(app);
 require('./controllers/profiles.js')(app);
 require('./controllers/auth.js')(app);

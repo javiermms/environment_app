@@ -1,11 +1,26 @@
 const Profile = require('../models/profile');
-let alreadyUser = true;
+
 
 module.exports = function (app) {
     // SIGN-UP GET
     app.get('/sign-up', (req, res) => {
       res.render('sign-up');
     });
+
+    // SIGN-UP POST
+    app.post('/sign-up', (req, res) => {
+        // CREATE USER
+        const profile = new Profile(req.body);
+
+        profile.save()
+        .then(profile => {
+            res.redirect('/');
+        })
+        .catch(err => {
+            console.log(err.message)
+        })
+    })
+    
     // LOGIN GET
     app.get('/login', (req, res) => {
         res.render('login')

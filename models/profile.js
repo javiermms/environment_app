@@ -1,18 +1,33 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/envi', { useNewUrlParser: true });
+const Schema = mongoose.Schema;
 
-const Profile = mongoose.model('Profile', {
+const ProfileSchema = new Schema({
+    createdAt: {
+        type: Date
+    },
+    updatedAt: {
+        type: Date
+    },
     username: {
-        type: String
+        type: String,
+        required: true
     },
-    email: {
-        type: String
-    },
-    bio: {
-        type: String
+    password: {
+        type: String,
+        select: false
     },
     foods: Array
     // foods: [Foods]
-})
+});
 
-module.exports = Profile;
+ProfileSchema.pre('save', function(next) {
+    // SET createdAt and updatedAt
+    const now = new Date();
+    this.updatedAt = now;
+    if (!this.createdAt) {
+        this.createdAt = now;
+    }
+    next();
+});
+
+module.exports = mongoose.model('Profile', ProfileSchema);
