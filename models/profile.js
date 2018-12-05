@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 const Schema = mongoose.Schema;
 
 const ProfileSchema = new Schema({
@@ -27,7 +28,25 @@ ProfileSchema.pre('save', function(next) {
     if (!this.createdAt) {
         this.createdAt = now;
     }
-    next();
+
+    // ENCRYPT PASSWORD
+    const profile = this;
+    if (!profile.isModified('password')) {
+        return next();
+    }
+    bcrypt.genSalt(10, (err, salt) => {
+        bcrypt.hash(profile.password, salt, (err, hash) => {
+            profile.password = hash;
+            next();
+        });
+    });
 });
+
+// Need to use function to enable this.password to work
+ProfileSchema.methods.comparePassword = function(password, done) {
+    bcrypt.compare(password, this.password, (err, isMatch) => {
+        done(err, isMatch);
+    });
+};
 
 module.exports = mongoose.model('Profile', ProfileSchema);

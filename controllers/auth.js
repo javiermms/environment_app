@@ -1,5 +1,9 @@
-const Profile = require('../models/profile');
+/*
+* Authentication routes
+*/
 
+const Profile = require('../models/profile');
+const jwt = require('jsonwebtoken');
 
 module.exports = function (app) {
     // SIGN-UP GET
@@ -11,20 +15,32 @@ module.exports = function (app) {
     app.post('/sign-up', (req, res) => {
         // CREATE USER
         const profile = new Profile(req.body);
-
         profile.save()
-        .then(profile => {
-            res.redirect('/');
-        })
+            .then(profile => {
+                var token = jwt.sign({
+                    _id: profile._id
+                }, process.env.SECRET, {
+                    expiresIn: '60 days'
+                });
+                res.cookie('nToken', token, {
+                    maxAge: 900000,
+                    httpOnly: true
+                });
+                res.redirect(`/profiles/${profile._id}`);
+            })
         .catch(err => {
             console.log(err.message)
+            return res.status(400).send({
+                err: err
+            });
         })
     })
-    
+
     // LOGIN GET
     app.get('/login', (req, res) => {
         res.render('login')
     })
+
     // LOGIN POST
     app.post('/login', (req, res) => {
         const query = { username: req.body.username }
@@ -41,4 +57,10 @@ module.exports = function (app) {
             console.log(err.message);
         });
     });
-};
+
+    // LOGOUT
+    app.get('/logout', (req, res) => {
+        res.clearCookie('nToken');
+        res.redirect('/');
+    });
+}

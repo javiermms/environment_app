@@ -1,3 +1,7 @@
+/*
+* Foods routes
+*/
+
 const Food = require('../models/food');
 const Profile = require('../models/profile');
 

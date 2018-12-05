@@ -6,6 +6,8 @@ const express = require('express');
 const methodOverride = require('method-override');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
+const cookieParser = require('cookie-parser');
+const jwt = require('jsonwebtoken');
 
 /** Instantiate server */
 const app = express();
@@ -27,22 +29,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
 app.use(bodyParser.json());
+app.use(cookieParser());
 
-/** Load Routes */
-app.get('profiles/:id/foods', (req, res) => {
-    console.log('got it')
-    res.render('food-index');
-    // Profile.findById(req.params.id)
-    // .then(profile => {
-    //     Food.find({})
-    //     .then((foods) => {
-    //         res.render('food-index', { profile: profile, foods: foods });
-    //     }).catch((err) => {
-    //         console.log(err.message);
-    //     });
-    // });
-});
-
+/** Require controllers */
 require('./controllers/foods.js')(app);
 require('./controllers/profiles.js')(app);
 require('./controllers/auth.js')(app);

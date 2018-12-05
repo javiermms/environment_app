@@ -1,3 +1,6 @@
+/*
+* User Profiles
+*/
 const Profile = require('../models/profile');
 const Food = require('../models/food');
 
