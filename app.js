@@ -9,6 +9,19 @@ const exphbs = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
 
+/** Custom middleware */
+const checkAuth = (req, res, next) => {
+    console.log('Checking authentication');
+    if (typeof req.cookies.nToken === 'undefined' || req.cookies === null) {
+        req.profile = null;
+    } else {
+        const token = req.cookies.nToken;
+        const decodedToken = jwt.decode(token, { complete: true }) || {};
+        req.profile = decodedToken.payload;
+    }
+    next();
+}
+
 /** Instantiate server */
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -30,6 +43,7 @@ app.use(methodOverride('_method'));
 app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(cookieParser());
+app.use(checkAuth);
 
 /** Require controllers */
 require('./controllers/foods.js')(app);

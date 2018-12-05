@@ -13,9 +13,12 @@
         </ul>
     </div> -->
     <div class="pull-right">
-      <a href="/sign-up"><button class="btn btn-default navbar-btn">Sign Up</button></a>
-      <a href="/login"><button class="btn btn-default navbar-btn">Login</button></a>
-      <a href="/logout"><button class="btn btn-default navbar-btn">Logout</button></a>
+        {{#if currentUser}}
+        <a href="/logout"><button class="btn btn-default navbar-btn">Logout</button></a>
+        {{else}}
+        <a href="/login"><button class="btn btn-default navbar-btn">Login</button></a>
+        <a href="/sign-up"><button class="btn btn-default navbar-btn">Sign Up</button></a>
+        {{/if}}
     </div>
   </div>
 </nav>

@@ -8,7 +8,8 @@ const jwt = require('jsonwebtoken');
 module.exports = function (app) {
     // SIGN-UP GET
     app.get('/sign-up', (req, res) => {
-      res.render('sign-up');
+        const currentUser = req.profile;
+        res.render('sign-up', { currentUser });
     });
 
     // SIGN-UP POST
@@ -38,7 +39,8 @@ module.exports = function (app) {
 
     // LOGIN GET
     app.get('/login', (req, res) => {
-        res.render('login')
+        const currentUser = req.profile;
+        res.render('login', { currentUser })
     })
 
     // LOGIN POST

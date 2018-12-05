@@ -4,16 +4,21 @@
 const Profile = require('../models/profile');
 const Food = require('../models/food');
 
-module.exports = function auth(app) {
+module.exports = (app) => {
   // ROOT
   app.get('/', (req, res) => {
-    res.render('index');
-  });
+    const currentUser = req.profile;
+    res.render('index', { currentUser });
+});
 
   // SHOW
   app.get('/profiles/:id', (req, res) => {
+    const currentUser = req.profile;
     Profile.findById(req.params.id, (err, profile) => {
-      res.render('profile', { profile: profile });
+      res.render('profile', {
+          profile: profile,
+          currentUser
+      });
     });
   });
 
@@ -49,11 +54,16 @@ module.exports = function auth(app) {
 
     // EDIT
     app.get('/profiles/:id/edit', (req, res) => {
+        const currentUser = req.profile;
         Profile.findById(req.params.id)
         .then((profile) => {
             Food.find()
             .then((foods) => {
-                res.render('edit-index', { profile: profile, foods: foods })
+                res.render('edit-index', {
+                    profile: profile,
+                    foods: foods,
+                    currentUser
+                })
             });
         });
     });
