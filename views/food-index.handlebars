@@ -11,8 +11,7 @@
     </div>
 
 
-    <select class="" name="foodSelect">
-        <th scope="row">
+    <select name="foodSelect">
             {{#each foods}}
             <option value="{{this._id}}">
                 {{this.name}}, {{this.description}}, {{this.CO2e}}
@@ -25,7 +24,11 @@
     </select>
 
     <div class="container-fluid" style="float: right;">
-        <button class="btn btn-primary" type="reset">Cancel</button>
+        <a href="/profiles/{{profile._id}}">
+            <button class="btn btn-primary" type="button">
+                Cancel
+            </button>
+        </a>
         <button class="btn btn-primary" type="submit">Submit</button>
     </div>
 </form>

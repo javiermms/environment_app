@@ -27,7 +27,6 @@ module.exports = (app) => {
         const query = req.body.foodSelect
         Food.findById(query)
         .then((food) => {
-          console.log(food);
           Profile.findByIdAndUpdate(req.params.id,
           {$push: { foods: food }})
             .then(profile => {
@@ -41,12 +40,15 @@ module.exports = (app) => {
       // UPDATE and REMOVE FOOD
       app.put('/profiles/:id/delete', (req, res) => {
           const query = req.body.foodSelect
+          console.log(req.body)
           Food.findById(query)
           .then((food) => {
+              console.log(food)
               Profile.findByIdAndUpdate(req.params.id,
               {$pull: { foods: food }},
               { safe: true, upsert: true })
               .then(profile => {
+                  // console.log(profile.foods)
                   res.redirect(`/profiles/${profile._id}`)
               });
           });
@@ -60,9 +62,9 @@ module.exports = (app) => {
             Food.find()
             .then((foods) => {
                 res.render('edit-index', {
+                    currentUser,
                     profile: profile,
-                    foods: foods,
-                    currentUser
+                    foods: foods
                 })
             });
         });

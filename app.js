@@ -11,7 +11,7 @@ const jwt = require('jsonwebtoken');
 
 /** Custom middleware */
 const checkAuth = (req, res, next) => {
-    console.log('Checking authentication');
+    // console.log('Checking authentication');
     if (typeof req.cookies.nToken === 'undefined' || req.cookies === null) {
         req.profile = null;
     } else {
