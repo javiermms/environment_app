@@ -71,6 +71,7 @@ module.exports = (app) => {
     });
     // DELETE
     app.delete('/profiles/:id', function (req, res) {
+        res.clearCookie('nToken');
         Profile.findByIdAndRemove(req.params.id)
         .then(profile => {
             console.log('sucessfully deleted')
