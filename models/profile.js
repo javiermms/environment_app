@@ -18,7 +18,6 @@ const ProfileSchema = new Schema({
         select: false
     },
     foods: Array
-    // foods: [Foods]
 });
 
 ProfileSchema.pre('save', function(next) {
