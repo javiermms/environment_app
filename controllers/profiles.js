@@ -54,7 +54,7 @@ module.exports = (app) => {
           });
       });
 
-    // EDIT
+    // EDIT SHOW
     app.get('/profiles/:id/edit', (req, res) => {
         const currentUser = req.profile;
         Profile.findById(req.params.id)
