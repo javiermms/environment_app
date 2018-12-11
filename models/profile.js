@@ -15,7 +15,8 @@ const ProfileSchema = new Schema({
     },
     password: {
         type: String,
-        select: false
+        select: false,
+        required: true
     },
     foods: Array
 });
