@@ -1,10 +1,15 @@
-# **To-Do List(v0):**
-## Home, Navbar and Profile
+## **To-Do List(v1):**
+- associate add buttons with the day using id
+- basic graph (0-100 graph)
+- days need to be associated with graph
+- hook up form to the data base for users to search (faith)
+- make emissions indicators fully functional
+- write out an ERD (paper or whiteboard)
+- vegetarianism detection
+- use executive summaries to makes the front page more informative
 
-## Profile and Food logging
-- look into express basic auth
-- require to add food on food-index (javier)
-- make profile form responsive (javier)
+
+# **To-Do List(v0):**
 
 ## DONE
 - connect add button to food log form
@@ -26,20 +31,5 @@
 - make 'submit' work on food-index page (faith)
 - food form submit button needs to route back to profile and update user profile (faith)
 - hook up edit food button (faith)
-
-## **To-Do List(v1):**
-- associate add buttons with the day using id
-- basic graph (0-100 graph)
-- days need to be associated with graph
-- hook up form to the data base for users to search (faith)
-- make emissions indicators fully functional
-- write out an ERD (paper or whiteboard)
-- vegetarianism detection
-- use executive summaries to makes the front page more informative
-
-
-// app.js
-https://www.npmjs.com/package/helper-moment
-app.locals.moment = require("helper-moment")
-
-create model with profile id and food id
+- require to add food on food-index (javier)
+- make profile form responsive (javier)
