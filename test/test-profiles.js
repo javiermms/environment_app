@@ -26,7 +26,7 @@ describe('Profiles', () => {
     after(() => {
         Profile.deleteMany({ username: "testBob123" })
             .exec((err, profiles) => {
-                console.log(profiles)
+                console.log("THE PROFILES", profiles)
                 profiles.remove();
             });
         Food.deleteMany({ name: "fakeAsparagus" })

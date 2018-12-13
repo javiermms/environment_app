@@ -28,7 +28,7 @@ module.exports = (app) => {
     app.post('/profiles/:id/foods', (req, res) =>{
         Food.create(req.body)
             .then((food) =>{
-                res.redirect(`/profiles/:id/foods`);
+                res.redirect(`/profiles/${req.params.id}/foods`);
             })
             .catch((err) =>{
                 console.log(err.message);
