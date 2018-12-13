@@ -34,6 +34,6 @@ This project was developed using MongoDB, Node.js and Express.js in the back-end
 This project can be accessed at http://localhost:3000/. To check it out, type the command 'npm start' into your console from the root folder. If you would like to check out the current, live version of FoodPrint, go to https://know-your-foodprint.herokuapp.com/.
 
 ## Notes
-For information on what we are currently working on and what we plan to work on in the future, take a look at Notes.md.
+For information on what we are currently working on and what we plan to work on in the future, take a look at notes.md.
 
 #### Contributors: Faith Chikwekwe 👩🏾‍💻, Javier Mendoza 👨🏽‍💻
