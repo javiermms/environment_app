@@ -28,7 +28,7 @@ We used basic front-end tools for the look of this project including HTML, CSS, 
 This project was developed using MongoDB, Node.js and Express.js in the back-end. We used resourceful and RESTful routing throughout and integrated authentication concepts.
 
 ## Testing
-[WIP] We used Mocha and Chai for testing. As with all projects, we aim for 100% test coverage. To run tests for this project, type the command 'mocha' into your console from the root folder.
+[WIP] We used Mocha and Chai for testing. As with all projects, we aim for 100% test coverage. To run tests for this project, type the command 'mocha' or 'npm test' into your console from the root folder.
 
 ## Running
 This project can be accessed at http://localhost:3000/. To check it out, type the command 'npm start' into your console from the root folder. If you would like to check out the current, live version of FoodPrint, go to https://know-your-foodprint.herokuapp.com/.
