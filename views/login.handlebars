@@ -1,41 +1,33 @@
 <form method="POST" action="/login">
     <fieldset>
-        <legend>Log in</legend>
-        <!-- {{#unless alreadyUser}}
-        <p style="color: red">Hmm...it looks like you don't have a profile.</p>
-        {{/unless}} -->
-         <a href="/sign-up">If you have not yet signed up, click here!</a><br><br>
-         <div class="input-group">
-            <!-- Username -->
-            <label for="username">Username</label><br>
-            <input class="form-control" id="loginUsername" type="text" name="username" value="{{profile.username}}"/>
+        <div class="login-card">
+            <legend>Log in</legend>
+            <!-- {{#unless alreadyUser}}
+            <p style="color: red">Hmm...it looks like you don't have a profile.</p>
+            {{/unless}} -->
+             <!-- <a href="/sign-up">If you have not yet signed up, click here!</a><br><br> -->
+             <div class="input-group">
+                <!-- Username -->
+                <label for="username">Username</label><br>
+                <input class="form-control" placeholder="username" type="text" name="username" value="{{profile.username}}"/>
 
-            <!-- Password -->
-            <label for="password">Password</label><br>
-            <input class="form-control" id="loginPassword" type="text" name="password" value="{{profile.password}}"/>
+                <!-- Password -->
+                <label for="password">Password</label><br>
+                <input class="form-control" placeholder="password" type="text" name="password" value="{{profile.password}}"/>
 
-            <br>
-            <br>
+                <br>
+                <br>
+            </div>
+                <!-- Submit Button -->
+            <span class="input-group-btn">
+                <a href="/login">
+                    <input class="login login-submit" type="submit" name="login">Submit</button>
+                </a>
+            </span>
+                <!-- Help Section -->
+            <div class="login-help">
+              <a href="/sign-up">Register</a> • <a href="#">Forgot Password</a>
+            </div>
         </div>
-
-        <span class="input-group-btn">
-            <a href="/login">
-                <button class="btn btn-primary" type="submit">Submit</button>
-            </a>
-        </span>
-
     </fieldset>
 </form>
-
-<!-- <div class="login-card">
-    <h1>Log-in</h1><br>
-  <form>
-    <input type="text" name="user" placeholder="Username">
-    <input type="password" name="password" placeholder="Password">
-    <input type="submit" name="login" class="login login-submit" value="login">
-  </form>
-
-  <div class="login-help">
-    <a href="#">Register</a> • <a href="#">Forgot Password</a>
-  </div>
-</div> -->
