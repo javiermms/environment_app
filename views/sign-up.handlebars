@@ -1,25 +1,30 @@
 <form method="POST" action="/sign-up">
     <fieldset>
-        <legend>Sign Up</legend>
+        <div class="login-card">
+            <h1>Sign-up</h1>
         <!-- Username -->
-        {{#if userExists}}
-        <a href="/login">Your username is already in use. Click here to login.</a>
-        {{/if}}
-        <div class="form-group">
-            <label for="username">Username</label><br>
-            <input class="form-control" id="username" type="text" name="username" placeholder="username"/>
-        </div>
+            {{#if userExists}}
+            <a href="/login">Your username is already in use. Click here to login.</a>
+            {{/if}}
+            <div class="form-group">
+                <label for="username">Username</label><br>
+                <input class="form-control" id="username" type="text" name="username" placeholder="username"/>
+            </div>
 
-        <!-- Password -->
-        <div class="form-group">
-            <label for="password">Password</label><br>
-            <input class="form-control" id="password" type="text" name="password" placeholder="password" />
-        </div>
-
-        <div class="form-group">
-            <a href="/profiles">
-                <button class="btn btn-primary" type="submit">Submit</button>
-            </a>
-        </div>
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Password</label><br>
+                <input class="form-control" id="password" type="text" name="password" placeholder="password" />
+            </div>
+            <!-- Submit Button -->
+            <span class="input-group-btn">
+                <a href="/sign-up">
+                    <input class="login login-submit" type="submit" name="login">Submit</button>
+                </a>
+            </span>
+            <!-- Help Section -->
+            <div class="login-help">
+              <a href="/login">Login</a> • <a href="#">Forgot Password</a>
+            </div>
     </fieldset>
 </form>
