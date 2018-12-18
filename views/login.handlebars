@@ -1,4 +1,10 @@
 <form method="POST" action="/login">
+    <div class="circle-left-small"></div>
+    <div class="circle-right"></div>
+    <!-- <div class="circle-top-med"></div> -->
+    <div class="circle-center-pink"></div>
+    <div class="circle-bottom-right"></div>
+    <div class="circle-mid-left"></div>
     <fieldset>
         <div class="login-card">
             <h1>Log in</h1>
@@ -9,11 +15,13 @@
              <div class="input-group">
                 <!-- Username -->
                 <label for="username">Username</label><br>
-                <input class="form-control" placeholder="username" type="text" name="username" value="{{profile.username}}"/>
+                <input placeholder="username" type="text" name="username" value="{{profile.username}}"/>
 
                 <!-- Password -->
                 <label for="password">Password</label><br>
-                <input class="form-control" placeholder="password" type="text" name="password" value="{{profile.password}}"/>
+                <input id="formPassword"placeholder="password" type="password" name="password" value="{{profile.password}}"/>
+                <!-- Show/Hide Password -->
+                <input type="checkbox" onclick="showPassword()"> Show Password
 
                 <br>
                 <br>
