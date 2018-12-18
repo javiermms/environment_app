@@ -1,9 +1,11 @@
-<nav id="navbar-main" class="navbar navbar-light">
+<nav id="navbar-main" class="navbar navbar-light fill">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/">
-        FoodPrint
-      </a>
+        <ul>
+            <li>
+                <a class="navbar-brand" href="/">F o o d P r i n t</a>
+            </li>
+        </ul>
     </div>
     <!-- <div>
         <ul class="nav navbar-nav">
@@ -13,12 +15,14 @@
         </ul>
     </div> -->
     <div class="pull-right">
-        {{#if currentUser}}
-        <a href="/logout"><button class="btn btn-default navbar-btn">Logout</button></a>
-        {{else}}
-        <a href="/login"><button class="btn btn-default navbar-btn">Login</button></a>
-        <a href="/sign-up"><button class="btn btn-default navbar-btn">Sign Up</button></a>
-        {{/if}}
+        <ul>
+            {{#if currentUser}}
+            <li><a href="/logout">Logout</a></li>
+            {{else}}
+            <li><a href="/login">Login</a></li>
+            <li><a href="/sign-up">Sign Up</a></li>
+            {{/if}}
+        </ul>
     </div>
   </div>
 </nav>
