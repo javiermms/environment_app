@@ -1,4 +1,6 @@
 <form method="POST" action="/login">
+
+    <!-- Decorative circles -->
     <div class="circle-left-small"></div>
     <div class="circle-right"></div>
     <!-- <div class="circle-top-med"></div> -->
@@ -12,7 +14,7 @@
             <p style="color: red">Hmm...it looks like you don't have a profile.</p>
             {{/unless}} -->
              <!-- <a href="/sign-up">If you have not yet signed up, click here!</a><br><br> -->
-             <div class="input-group">
+            <div class="input-group">
                 <!-- Username -->
                 <label for="username">Username</label><br>
                 <input placeholder="username" type="text" name="username" value="{{profile.username}}"/>
@@ -26,12 +28,14 @@
                 <br>
                 <br>
             </div>
+            
                 <!-- Submit Button -->
             <span class="input-group-btn">
                 <a href="/login">
                     <input class="login login-submit" type="submit" name="login">Submit</button>
                 </a>
             </span>
+
                 <!-- Help Section -->
             <div class="login-help">
               <a href="/sign-up">Register</a> • <a href="#">Forgot Password</a>
