@@ -1,7 +1,7 @@
 
 /** Toggle Password */
 function showPassword() {
-  var x = document.getElementById("formPassword");
+  let x = document.getElementById("formPassword");
   if (x.type === "password") {
     x.type = "text";
   } else {
@@ -10,10 +10,11 @@ function showPassword() {
 }
 
 /** Add Up CO2e */
-function AddCO2e(data_carbon_list) {
-let total_carbon = 0;
-    for (i = 0; i < data_carbon_list.length; i++) {
-        total_carbon += data_carbon_list[i];
+function AddCO2e() {
+let carbonList = document.getElementsbyClassName("carbon");
+let totalCarbon = 0;
+    for (i = 0; i < carbonList.length; i++) {
+        total_carbon += carbonList[i];
     }
     return total_carbon
 }

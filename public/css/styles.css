@@ -158,7 +158,53 @@ html, body {
     background-color: #0a8df3;
     border-radius: 50%;
     opacity: 0.7;
+    z-index: 1;
 }
+
+.circle-left-green {
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    top: 80px;
+    left: 60px;
+    background-color: #b3ffd9;
+    border-radius: 50%;
+    opacity: 0.7;
+    z-index: 1;
+}
+.circle-left-pink {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 280px;
+    left: 0px;
+    background-color: #ffcce6;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.circle-left-blue {
+    height: 140px;
+    width: 140px;
+    position: absolute;
+    top: 420px;
+    left: 80px;
+    background-color: #ffe6b3;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.circle-left-beige {
+    height: 160px;
+    width: 160px;
+    position: absolute;
+    top: 550px;
+    left: -10px;
+    background-color: #0a8df3;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
 
 .circle-top-med {
     height: 260px;
@@ -441,4 +487,25 @@ body {
 }
 .login-card {
     margin-top: 4em;
+}
+
+/** Profile Styles */
+.profile-page {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 180px;
+    margin-right: 180px;
+}
+
+#profile-title {
+  font-weight: 150;
+  text-align: center;
+  color: #0a8df3;
+}
+
+.profile-test {
+    background-color: #fff;
+    color: #0a8df3;
+    font-weight: bolder;
+    font-style: italic;
+    text-decoration: underline;
 }

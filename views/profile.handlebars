@@ -1,7 +1,13 @@
-<h2>Welcome, {{profile.username}}!</h2>
+<div class="circle-left-beige"></div>
+<div class="circle-left-pink"></div>
+<div class="circle-left-green"></div>
+<div class="circle-left-blue"></div>
+
+<div class="profile-page">
+<h2 id="profile-title">Welcome, {{profile.username}}!</h2>
 
 <legend>Foods You've Eaten Today:</legend>
-<div>
+
     <table class="table">
         <thead>
             <tr>
@@ -11,8 +17,8 @@
         </thead>
         <tbody>
             <tr id="">
-                <td scope="row">(Example) beef</td>
-                <td>27 CO2e</td>
+                <td class="profile-test" scope="row">(Example) beef</td>
+                <td class="profile-test" >27 CO2e</td>
             </tr>
             {{#each profile.foods}}
             <tr id="">
@@ -20,14 +26,12 @@
                 <td class="carbon" data-carbon="{{this.CO2e}}">{{this.CO2e}} CO2e</td>
             </tr>
             {{/each}}
+
             <tr>
-            <tr>
-                <th>
-                    <a href="/profiles/{{profile.id}}/foods">Add Food</a>
-                <ins>|</ins>
-                    <a href="/profiles/{{profile.id}}/edit">Delete Food</a>
-                </th>
-                <th></th>
+                <td></td>
+                <td></td>
+            </tr>
+
             <!-- </tr>
                 <th>Total Carbon Output:</th>
                 <th>Great</th>
@@ -48,15 +52,28 @@
             </tr> -->
         </tbody>
     </table>
+
+    <br>
+
+    <!-- Add and Delete Buttons -->
+    <div class="row">
+        <a href="/profiles/{{profile.id}}/foods">
+            <input class="login login-submit" type="submit" value="Add Food"></button>
+        </a>
+        <a href="/profiles/{{profile.id}}/edit">
+            <input class="login login-submit" type="submit" value="Delete Food"></button>
+        </a>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <form method="POST" action="/profiles/{{profile._id}}?_method=DELETE">
+        <h3>
+            <button class="btn btn-primary" type="submit">DELETE MY PROFILE</button>
+        </h3>
+    </form>
 </div>
-<br>
-<br>
-<br>
-<form method="POST" action="/profiles/{{profile._id}}?_method=DELETE">
-    <h3>
-        <button class="btn btn-primary" type="submit">DELETE MY PROFILE</button>
-    </h3>
-</form>
 
 <fieldset>
   <!-- <legend>Today's Meals</legend> -->
