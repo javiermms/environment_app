@@ -10,11 +10,11 @@ function showPassword() {
 }
 
 /** Add Up CO2e */
-function AddCO2e() {
-let carbonList = document.getElementsbyClassName("carbon");
+function addCO2e() {
+let carbonList = document.getElementsbyTagName("dataCarbon");
 let totalCarbon = 0;
     for (i = 0; i < carbonList.length; i++) {
-        total_carbon += carbonList[i];
+        totalCarbon += carbonList[i];
     }
-    return total_carbon
+document.getElementById('total').innerHTML = total;
 }

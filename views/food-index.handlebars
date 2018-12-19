@@ -1,34 +1,50 @@
-<legend>Add Food</legend>
-<form action="/profiles/{{profile._id}}?_method=PUT" method="POST">
-    <div class="input-group">
-        <h3>Search function coming soon!</h3>
-       <!-- <input type="text" class="form-control" id="search" type="search" name="search" placeholder="Look up food here">
-       <span class="input-group-btn">
-            <a href="/profiles">
-              <button class="btn btn-primary" type="button">Search</button>
-            </a>
-       </span> -->
-    </div>
+<div class="profile-page">
+    <legend>Add Food</legend>
+    <form action="/profiles/{{profile._id}}?_method=PUT" method="POST">
+        <div class="input-group">
+            <h3 id="search-function">Search function coming soon!</h3>
+           <!-- <input type="text" class="form-control" id="search" type="search" name="search" placeholder="Look up food here">
+           <span class="input-group-btn">
+                <a href="/profiles">
+                  <button class="btn btn-primary" type="button">Search</button>
+                </a>
+           </span> -->
+        </div>
 
+        <h3>Select your food below!</h3>
+        <br>
+        <select name="foodSelect">
+                {{#each foods}}
+                <option value="{{this._id}}">
+                    {{this.name}}, {{this.description}}, {{this.CO2e}}
+                </option>
+                {{else}}
+                <option value="">
+                    No food yet...
+                </option>
+                {{/each}}
+        </select>
+        <br>
+        <br>
+        <div class="container-fluid">
+            <!-- Submit and Cancel Buttons -->
+            <div id="food-submit" class="row">
+                <button href="/profiles/{{profile.id}}" class="login login-submit" value="Cancel">Cancel</button>
+                &nbsp;
+                <button class="login login-submit" type="submit" value="Submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
 
-    <select name="foodSelect">
-            {{#each foods}}
-            <option value="{{this._id}}">
-                {{this.name}}, {{this.description}}, {{this.CO2e}}
-            </option>
-            {{else}}
-            <option value="">
-                No food yet...
-            </option>
-            {{/each}}
-    </select>
-
-    <div class="container-fluid" style="float: right;">
-        <a href="/profiles/{{profile._id}}">
-            <button class="btn btn-primary" type="button">
-                Cancel
-            </button>
-        </a>
-        <button class="btn btn-primary" type="submit">Submit</button>
-    </div>
-</form>
+<!-- Decorative Circles -->
+<div class="circle-left-beige"></div>
+<div class="circle-left-pink"></div>
+<div class="circle-left-green"></div>
+<div class="circle-left-blue"></div>
+<div class="circle-left-orange"></div>
+<div class="circle-right-red"></div>
+<div class="circle-right-yellow"></div>
+<div class="circle-right-blue"></div>
+<div class="circle-right-green"></div>
+<div class="circle-right-purple"></div>

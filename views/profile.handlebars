@@ -1,8 +1,3 @@
-<div class="circle-left-beige"></div>
-<div class="circle-left-pink"></div>
-<div class="circle-left-green"></div>
-<div class="circle-left-blue"></div>
-
 <div class="profile-page">
 <h2 id="profile-title">Welcome, {{profile.username}}!</h2>
 
@@ -23,13 +18,13 @@
             {{#each profile.foods}}
             <tr id="">
                 <td>{{this.name}}</td>
-                <td class="carbon" data-carbon="{{this.CO2e}}">{{this.CO2e}} CO2e</td>
+                <td class="carbon" dataCarbon="{{this.CO2e}}">{{this.CO2e}} CO2e</td>
             </tr>
             {{/each}}
 
             <tr>
                 <td></td>
-                <td></td>
+                <td onload="addCO2e()" id="total"></td>
             </tr>
 
             <!-- </tr>
@@ -70,7 +65,7 @@
     <br>
     <form method="POST" action="/profiles/{{profile._id}}?_method=DELETE">
         <h3>
-            <button class="btn btn-primary" type="submit">DELETE MY PROFILE</button>
+            <input class="login login-submit" type="submit" value="DELETE PROFILE"></button>
         </h3>
     </form>
 </div>
@@ -178,3 +173,15 @@
   <hr> -->
   </fieldset>
   </div>
+
+  <!-- Decorative Circles -->
+  <div class="circle-left-beige"></div>
+  <div class="circle-left-pink"></div>
+  <div class="circle-left-green"></div>
+  <div class="circle-left-blue"></div>
+  <div class="circle-left-orange"></div>
+  <div class="circle-right-red"></div>
+  <div class="circle-right-yellow"></div>
+  <div class="circle-right-blue"></div>
+  <div class="circle-right-green"></div>
+  <div class="circle-right-purple"></div>
